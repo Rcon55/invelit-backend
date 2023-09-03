@@ -1,1 +1,6 @@
 /env
+/alembic
+__pycache__
+.vscode
+
+*.env
