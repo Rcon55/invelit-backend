@@ -1,0 +1,4 @@
+docker compose build
+docker compose up 
+docker-compose run app alembic revision --autogenerate -m "migration"
+docker-compose run app alembic upgrade head

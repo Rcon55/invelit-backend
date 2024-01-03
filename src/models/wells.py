@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Float
-from sqlalchemy.sql import func
 
-from src.models.base import Base
+from .base import Base, engine
 
 
 class Datasets(Base):
@@ -50,3 +49,5 @@ class Dict(Base):
     group = Column(Integer)
     name = Column(String(30))
     description = Column(String(400))
+
+Base.metadata.create_all(engine)

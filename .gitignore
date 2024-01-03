@@ -1,6 +1,9 @@
 /env
-/alembic
 __pycache__
 .vscode
 
 *.env
+
+#Миграции
+/alembic
+/migrations
