@@ -9,11 +9,10 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Float
 load_dotenv(r'.env')
 
 engine = create_engine(os.environ['DATABASE_URL'])
-
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
 
-Base = declarative_base()
 
+Base = declarative_base()
 
 class Datasets(Base):
     __tablename__ = "Datasets"
